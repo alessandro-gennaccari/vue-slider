@@ -10,23 +10,30 @@
 
     </head>
     <body>
+
         <div id="slider" class="container">
             <div class="slider-wrapper">
-                <div class="prev" @click="goPrev">
+
+                <div class="prev" @click="goPrev" @keyup="goPrev">
                     <i class="fas fa-angle-left"></i>
                 </div>
+
                 <div class="images">
                     <img :src="imgs[counter]">
                 </div>
+
                 <div class="next" @click="goNext">
                     <i class="fas fa-angle-right"></i>
                 </div>
+
                 <div class="nav">
-                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle" v-for="(element, index) in imgs" :class="(index == counter) ? 'active' : ''" @click="pointClick(index)"></i>
                 </div>
+
             </div>
         </div>
 
         <script src="js/script.js"></script>
+
     </body>
 </html>
