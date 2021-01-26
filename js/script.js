@@ -9,5 +9,13 @@ var slider = new Vue({
       'img/5.jpg'
     ],
     counter: 0
+  },
+  methods: {
+    goNext(){
+      (this.counter == (this.imgs.length - 1)) ? this.counter = 0 : this.counter++;
+    },
+    goPrev(){
+      (this.counter == 0) ? this.counter = 4 : this.counter--;
+    }
   }
 });

@@ -37,6 +37,7 @@
     font-size: 60px;
     cursor: pointer;
     color: #0187f1;
+    background-color: red;
 }
 .next {
     left: auto;
