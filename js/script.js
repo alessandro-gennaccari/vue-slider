@@ -16,6 +16,9 @@ var slider = new Vue({
     },
     goPrev(){
       (this.counter == 0) ? this.counter = 4 : this.counter--;
+    },
+    pointClick(position){
+      this.counter = position;
     }
   }
 });
